@@ -112,7 +112,9 @@ with st.sidebar:
 
     if st.button("🔄 Build / Rebuild Index", use_container_width=True, type="primary"):
         build_index()
-
+    if existing_docs and getattr(st.session_state, "index_status", None) not in ["loaded", "building"]:
+        build_index()
+    
     status = st.session_state.index_status
     if status == "loaded":
         n_chunks = getattr(st.session_state, "num_chunks", None)
