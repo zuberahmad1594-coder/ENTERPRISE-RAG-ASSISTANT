@@ -1,0 +1,5 @@
+{
+  "embedding_model": "all-MiniLM-L6-v2",
+  "num_chunks": 12,
+  "dimension": 384
+}
